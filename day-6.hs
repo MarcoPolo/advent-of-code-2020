@@ -28,5 +28,4 @@ part1 input =
 part2 input =
   let groups = map (map (Map.fromList . map (,1)) . splitOn "\n") (splitOn "\n\n" input)
       commonAnswers = map (foldl1' Map.intersection) groups
-   in --
-      sum $ map length commonAnswers
+   in sum $ map length commonAnswers
