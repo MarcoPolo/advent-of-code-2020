@@ -11,4 +11,4 @@ Integrates with `direnv` + flakes with
 # One liner with flake
 ```
 nix develop github:marcopolo/advent-of-code-2020  --command runhaskell day-1.hs
-```
+``
