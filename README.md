@@ -8,6 +8,10 @@ Enter a development shell with `nix develop`.
 Integrates with `direnv` + flakes with
 `https://github.com/nix-community/nix-direnv`
 
+# Developing
+
+`ghcid day-1.hs -r`
+
 # One liner with flake
 ```
 nix develop github:marcopolo/advent-of-code-2020  --command runhaskell day-1.hs
