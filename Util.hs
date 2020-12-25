@@ -7,6 +7,12 @@ helper filepath prefix solver =
     putStr prefix
     print $ show (solver content)
 
+helperM filepath prefix solver =
+  do
+    content <- readFile filepath
+    putStrLn prefix
+    solver content
+
 helperStr :: Show x => String -> String -> (String -> x) -> IO ()
 helperStr content prefix solver =
   do
