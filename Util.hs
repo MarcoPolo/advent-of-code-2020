@@ -13,6 +13,14 @@ helperM filepath prefix solver =
     putStrLn prefix
     solver content
 
+helperMStr content prefix solver =
+  do
+    putStrLn prefix
+    putStr " "
+    putStr content
+    putStr " -> "
+    solver content
+
 helperStr :: Show x => String -> String -> (String -> x) -> IO ()
 helperStr content prefix solver =
   do
@@ -21,3 +29,5 @@ helperStr content prefix solver =
     putStr content
     putStr " -> "
     print $ show (solver content)
+
+takeWhileDifferent xs = head xs : map snd (takeWhile (uncurry (/=)) $ zip xs (tail xs))
